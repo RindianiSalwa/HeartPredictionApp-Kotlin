@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HeartFailurePredictionApp</string>
+
+    <!-- Menu -->
+    <string name="menu_about_title">Tentang Aplikasi</string>
+    <string name="menu_dataset_title">Dataset</string>
+    <string name="menu_features_title">Fitur</string>
+    <string name="menu_model_title">Model</string>
+    <string name="menu_simulation_title">Simulasi</string>
+
+    <!-- Menu Descriptions -->
+    <string name="app_desc_about">Informasi mengenai tujuan dan pembuat aplikasi.</string>
+    <string name="app_desc_dataset">Melihat informasi dan struktur dataset yang digunakan.</string>
+    <string name="app_desc_features">Penjelasan tentang fitur-fitur yang mempengaruhi prediksi.</string>
+    <string name="app_desc_model">Detail tentang model Machine Learning yang digunakan.</string>
+    <string name="app_desc_simulation">Melakukan simulasi prediksi penyakit jantung.</string>
+
+    <!-- Welcome -->
+    <string name="button_enter_app">MASUK APLIKasi</string>
+
+    <!-- Input Form -->
+    <string name="input_age_label">Usia</string>
+    <string name="input_ejection_fraction_label">Ejection Fraction (%)</string>
+    <string name="input_serum_creatinine_label">Serum Creatinine (mg/dL)</string>
+    <string name="input_serum_sodium_label">Serum Sodium (mEq/L)</string>
+    <string name="input_follow_up_time_label">Follow-up Time (hari)</string>
+    <string name="input_anaemia_label">Anaemia</string>
+    <string name="input_high_blood_pressure_label">Tekanan Darah Tinggi</string>
+    <string name="input_sex_label">Jenis Kelamin</string>
+    <string name="button_predict_text">PREDIKSI</string>
+
+    <!-- Input Options -->
+    <string name="option_ada">Ada</string>
+    <string name="option_tidak_ada">Tidak Ada</string>
+    <string name="option_male">Pria</string>
+    <string name="option_female">Wanita</string>
+
+    <string-array name="anaemia_options">
+        <item>Ada</item>
+        <item>Tidak Ada</item>
+    </string-array>
+    <string-array name="high_blood_pressure_options">
+        <item>Ada</item>
+        <item>Tidak Ada</item>
+    </string-array>
+    <string-array name="sex_options">
+        <item>Pria</item>
+        <item>Wanita</item>
+    </string-array>
+
+    <!--Toast-->
+    <string name="toast_fill_all_fields">Mohon lengkapi semua data input numerik.</string>
+    <string name="toast_model_not_loaded">Model belum dimuat.</string>
+    <string name="toast_model_load_failed">Gagal memuat model: %1$s</string>
+    <string name="error_prediction_failed">Terjadi kesalahan saat memproses prediksi: %1$s</string>
+
+    <!-- Prediction  -->
+    <string name="prediction_result_not_dead_text">Pasien diprediksi TIDAK MENINGGAL akibat gagal jantung.</string>
+    <string name="prediction_result_dead_text">Pasien diprediksi MENINGGAL akibat gagal jantung.</string>
+    <string name="prediction_icon_description">Ikon hasil prediksi</string>
+    <string name="prediction_result_placeholder">Hasil prediksi akan muncul di sini</string>
+
+    <string name="increment_value">Tambah nilai</string>
+    <string name="decrement_value">Kurangi nilai</string>
+
+    <!-- Dataset Activity -->
+    <string name="judul_dataset">Dataset</string>
+    <string name="judul_deskripsi">Deskripsi</string>
+    <string name="judul_list_dataset">List Dataset (Visual)</string>
+    <string name="desc_gambar_dataset">Ikon representasi dataset</string>
+    <string name="isi_deskripsi">
+        Dataset ini berisi informasi klinis dari 299 pasien gagal jantung, seperti usia, kadar kreatinin, sodium, tekanan darah tinggi, dan status kematian. Data ini digunakan untuk membangun model prediksi kematian.
+    </string>
+
+    <!-- Model -->
+    <string name="model_desc_1">Aplikasi ini menggunakan model &lt;b&gt;Artificial Neural Network (ANN)&lt;/b&gt; atau &lt;b&gt;Jaringan Saraf Tiruan&lt;/b&gt; untuk memprediksi risiko kematian akibat gagal jantung. ANN adalah salah satu jenis algoritma Machine Learning yang terinspirasi dari cara kerja otak manusia dalam memproses informasi. Model ini dirancang untuk mengidentifikasi pola kompleks dalam data klinis pasien agar dapat menghasilkan prediksi yang akurat.</string>
+    <string name="model_desc_2">Model ANN bekerja dengan menerima berbagai data klinis pasien sebagai input. Data ini pertama-tama akan melalui proses &lt;b&gt;normalisasi (scaling)&lt;/b&gt; menggunakan &lt;b&gt;StandardScaler&lt;/b&gt; untuk memastikan semua fitur memiliki skala yang seragam, sehingga model dapat belajar lebih efektif dan akurat.\n\nSetelah itu, data yang sudah diskalakan melewati beberapa &amp;quot;lapisan tersembunyi&amp;quot; (hidden layers) yang terdiri dari banyak &amp;quot;neuron&amp;quot; buatan. Setiap neuron memproses informasi dan meneruskannya ke neuron berikutnya. Akhirnya, pada &amp;quot;lapisan output&amp;quot;, model menghasilkan prediksi apakah pasien berisiko mengalami kematian akibat gagal jantung (Ya/Tidak).</string>
+    <string name="model_desc_3">Model ANN yang kami gunakan memiliki struktur Sequential dan terdiri dari beberapa lapisan penting:\n\n&lt;b&gt;Lapisan Input:&lt;/b&gt; Menerima 12 fitur data klinis pasien (misalnya: Usia, Anemia, Fraksi Ejeksi, dll.) setelah melalui proses penskalaan.\n&lt;b&gt;Lapisan Tersembunyi 1:&lt;/b&gt; Terdiri dari &lt;b&gt;32 neuron&lt;/b&gt; yang menggunakan fungsi aktivasi &lt;b&gt;ReLU (Rectified Linear Unit)&lt;/b&gt;. Fungsi ini membantu model mempelajari hubungan non-linear dalam data.\n&lt;b&gt;Lapisan Tersembunyi 2:&lt;/b&gt; Terdiri dari &lt;b&gt;16 neuron&lt;/b&gt; yang juga menggunakan fungsi aktivasi &lt;b&gt;ReLU&lt;/b&gt;.\n&lt;b&gt;Lapisan Output:&lt;/b&gt; Terdiri dari &lt;b&gt;1 neuron&lt;/b&gt; yang menggunakan fungsi aktivasi &lt;b&gt;Sigmoid&lt;/b&gt;. Fungsi Sigmoid ini mengubah hasil menjadi probabilitas antara 0 dan 1, yang sangat cocok untuk masalah klasifikasi biner (0 untuk tidak berisiko, 1 untuk berisiko tinggi).</string>
+    <string name="model_desc_4">Model ini telah melalui proses pelatihan yang cermat menggunakan data historis pasien. Parameter pelatihan penting meliputi:\n\n&lt;b&gt;Optimizer:&lt;/b&gt; Menggunakan &lt;b&gt;Adam Optimizer&lt;/b&gt;, sebuah algoritma yang efisien untuk membantu model menemukan bobot terbaik.\n&lt;b&gt;Fungsi Kerugian (Loss Function):&lt;/b&gt; Menggunakan &lt;b&gt;Binary Crossentropy&lt;/b&gt;, metrik standar untuk mengukur kesalahan pada masalah klasifikasi biner.\n&lt;b&gt;Jumlah Epochs:&lt;/b&gt; Model dilatih selama &lt;b&gt;50 epoch&lt;/b&gt;, yang berarti seluruh dataset pelatihan dilewatkan ke model sebanyak 50 kali.\n&lt;b&gt;Batch Size:&lt;/b&gt; Data diproses dalam kelompok kecil (batch) berukuran &lt;b&gt;32&lt;/b&gt;, untuk mempercepat pelatihan.\n\n&lt;b&gt;Kinerja Model:&lt;/b&gt;\nBerdasarkan evaluasi terhadap data uji (test data), model ini mampu mencapai akurasi sekitar &lt;b&gt;86.67%&lt;/b&gt; dalam memprediksi risiko kematian akibat gagal jantung. Angka ini menunjukkan kemampuan model yang baik dalam mengidentifikasi pasien berisiko.</string>
+
+    <!--Modeling-->
+    <string name="toolbar_title_modeling">Modeling</string>
+
+    <string name="desc_model_architecture">Arsitektur Model Jaringan Saraf</string>
+    <string name="text_model_architecture">Arsitektur model jaringan saraf tiruan (Neural Network) dibangun menggunakan Sequential API dari Keras. Model ini terdiri dari: satu layer input dengan 16 neuron (menggunakan fungsi aktivasi \'relu\'), satu hidden layer kedua dengan 8 neuron (menggunakan fungsi aktivasi \'relu\'), dan satu layer output dengan 1 neuron (menggunakan fungsi aktivasi \'sigmoid\') untuk klasifikasi biner.</string>
+
+    <string name="desc_model_compile_earlystop">Kompilasi Model dan Early Stopping</string>
+    <string name="text_model_compile_earlystop">Model dikompilasi dengan optimizer \'adam\', fungsi loss \'binary_crossentropy\' (karena ini adalah masalah klasifikasi biner), dan metrik \'accuracy\' untuk evaluasi. Early Stopping juga diimplementasikan untuk mencegah overfitting; proses pelatihan akan berhenti jika \'val_loss\' (validation loss) tidak menurun selama 10 epoch berturut-turut, dan bobot terbaik akan dipulihkan.</string>
+
+    <string name="desc_model_training_progress">Progres Pelatihan Model</string>
+    <string name="text_model_training_progress">Proses pelatihan model dilakukan menggunakan data pelatihan (X_train, y_train) dengan validasi split 20% dari data pelatihan. Model dilatih hingga 100 epoch dengan ukuran batch 16, dan callback Early Stopping diterapkan. Ini memungkinkan model untuk belajar dari data dan berhenti ketika tidak ada peningkatan signifikan pada performa validasi.</string>
+
+    <string name="desc_model_evaluation_result">Hasil Evaluasi Model</string>
+    <string name="text_model_evaluation_result">Hasil evaluasi model pada test set menunjukkan akurasi sebesar 0.82 (atau 82%). Ini mengindikasikan bahwa model dapat memprediksi risiko gagal jantung dengan cukup baik pada data yang belum pernah dilihat sebelumnya.</string>
+    <!--Evaluation -->
+    <string name="toolbar_title_evaluation">Evaluation</string>
+    <string name="desc_confusion_matrix">Matriks Kebingungan</string>
+    <string name="text_confusion_matrix">Matriks kebingungan (Confusion Matrix) adalah alat penting untuk mengevaluasi kinerja model klasifikasi. Ini menunjukkan jumlah True Positives (TP), True Negatives (TN), False Positives (FP), dan False Negatives (FN). Dari matriks ini, kita bisa melihat distribusi prediksi model dibandingkan dengan nilai sebenarnya.</string>
+    <string name="desc_classification_report">Laporan Klasifikasi</string>
+    <string name="text_classification_report">Laporan klasifikasi (Classification Report) memberikan metrik evaluasi yang lebih rinci seperti Precision, Recall, dan F1-Score untuk setiap kelas. Precision menunjukkan proporsi prediksi positif yang benar, Recall menunjukkan kemampuan model menemukan semua instance positif, dan F1-Score adalah rata-rata harmonik dari Precision dan Recall. Metrik ini sangat penting untuk memahami kinerja model pada setiap kelas, terutama pada dataset yang tidak seimbang.</string>
+<!-- ModelSimulation-->
+    <string name="toolbar_title_simulation">Model Simulation</string>
+    <string name="desc_model_prediction">Prediksi Model</string>
+    <string name="text_model_prediction">Simulasi prediksi model menunjukkan bagaimana model dapat digunakan untuk memprediksi risiko gagal jantung pada data baru. Data input disiapkan (dinormalisasi dan disatukan kembali jika perlu) agar sesuai dengan format yang diharapkan model. Setelah itu, model membuat prediksi (probabilitas) yang kemudian dikonversi menjadi label kelas biner (meninggal/tidak meninggal). Contoh ini menunjukkan proses lengkap dari input data hingga hasil prediksi akhir.</string>
+
+
+    <string name="desc_image_placeholder">Gambar Placeholder</string>
+    <string name="text_placeholder">Deskripsi teks placeholder untuk konten di masa mendatang.</string>
+</resources>

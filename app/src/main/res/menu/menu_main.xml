@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_prevention"
+        android:icon="@drawable/prevention"
+        android:title="Pencegahan"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_treatment"
+        android:icon="@drawable/treatment"
+        android:title="Penanganan"
+        app:showAsAction="ifRoom" />
+
+</menu>
